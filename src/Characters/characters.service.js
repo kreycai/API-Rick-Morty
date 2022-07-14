@@ -9,7 +9,8 @@ const findByIdCharService = (idUser) => Characters.findById(idUser);
 const updateCharService = (idParam, editTarefa) =>
   Characters.findByIdAndUpdate(idParam, editTarefa);
 const deleteCharService = (idParam) => Characters.findByIdAndDelete(idParam);
-const searchCharService = (query) => Characters.find({ name: { $regex: `${query || ''}`, $options: 'i' } });
+const searchCharService = (query) =>
+  Characters.find({ name: { $regex: `${query || ''}`, $options: 'i' } });
 
 export {
   createCharacterService,

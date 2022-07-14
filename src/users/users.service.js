@@ -1,4 +1,4 @@
-import { User } from "./User.js";
+import { User } from './User.js';
 
 const findByEmailUserService = (email) => User.findOne({ email: email });
 const createUserService = (body) => User.create(body);

@@ -1,7 +1,7 @@
-import mongoose from "mongoose";
+import mongoose from 'mongoose';
 
 const connectDatabase = () => {
-  console.log("conectando com o DB");
+  console.log('conectando com o DB');
 
   mongoose
     .connect(process.env.DATABASE_URL, {
@@ -9,9 +9,9 @@ const connectDatabase = () => {
       useUnifiedTopology: true,
     })
     .then(() => {
-      console.log("MongoDB Conectado");
+      console.log('MongoDB Conectado');
     })
-    .catch((err) => console.log("Erro ao conectar"));
+    .catch((err) => console.log('Erro ao conectar'));
 };
 
 export { connectDatabase };

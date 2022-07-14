@@ -1,9 +1,9 @@
-import mongoose from "mongoose";
+import mongoose from 'mongoose';
 
 const userSchema = new mongoose.Schema({
   user: {
     type: mongoose.Schema.Types.ObjectId,
-    ref: "User",
+    ref: 'User',
     required: true,
   },
   name: {
@@ -17,6 +17,6 @@ const userSchema = new mongoose.Schema({
   },
 });
 
-const Characters = mongoose.model("Characters", userSchema);
+const Characters = mongoose.model('Characters', userSchema);
 
 export { Characters };

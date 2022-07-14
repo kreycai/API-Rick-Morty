@@ -1,16 +1,16 @@
-import * as userService from "./users.service.js";
-import * as authService from "../auth/auth.service.js";
+import * as userService from './users.service.js';
+import * as authService from '../auth/auth.service.js';
 
 const createUserController = async (req, res) => {
   const { name, username, email, password, photo } = req.body;
   if (!name || !username || !email || !password || !photo) {
-    return res.status(400).send({ message: "alguns campos estão faltando." });
+    return res.status(400).send({ message: 'alguns campos estão faltando.' });
   }
 
   const foundUser = await userService.findByEmailUserService(email);
 
   if (foundUser) {
-    return res.status(400).send({ message: "Usuario já existe!" });
+    return res.status(400).send({ message: 'Usuario já existe!' });
   }
 
   const user = await userService
@@ -19,7 +19,7 @@ const createUserController = async (req, res) => {
 
   if (!user) {
     return res.status(400).send({
-      message: "Erro ao criar usuario!",
+      message: 'Erro ao criar usuario!',
     });
   }
 
@@ -42,7 +42,7 @@ const findAllUserController = async (req, res) => {
 
   if (users.length === 0) {
     return res.status(400).send({
-      message: "Não existem usuários cadastrados!",
+      message: 'Não existem usuários cadastrados!',
     });
   }
 

@@ -5,7 +5,7 @@ import { connectDatabase } from './database/database.js';
 import { routerUsers } from './users/users.route.js';
 import { routerAuth } from './auth/auth.route.js';
 import { routerChar } from './Characters/characters.route.js';
-
+//
 const port = process.env.PORT || 3001;
 const app = express();
 

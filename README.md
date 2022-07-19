@@ -9,8 +9,10 @@ bcryptjs: 2.4.3
 jsonwebtoken: 8.5.1
 swagger-ui-express: 4.4.0
 
-install
+install: 
 npm i
 
-run
+run: 
 npm run start
+
+Swagger: /api-docs
